@@ -46,12 +46,12 @@ bool search(struct List *list, int data) {
 }
 
 void delete_data(struct List *list, int data) {
-  struct Node *ptr = list->head;
-
   // first element
   if (list->head != NULL && list->head->data == data) {
     list->head = list->head->next;
   }
+
+  struct Node *ptr = list->head;
 
   while (ptr->next != NULL) {
     if (ptr->next->data == data) {
@@ -63,6 +63,20 @@ void delete_data(struct List *list, int data) {
   }
 
   return;
+}
+
+void reverse(struct List *list) {
+  struct Node *ptr = list->head, *prev_ptr = NULL, *next_ptr;
+
+  while (ptr != NULL) {
+    next_ptr = ptr->next;
+    ptr->next = prev_ptr;
+    prev_ptr = ptr;
+
+    ptr = next_ptr;
+  }
+
+  list->head = prev_ptr;
 }
 
 bool assert_list(struct List *list, int arr[], int size) {
@@ -104,20 +118,48 @@ void test() {
   search(list, 30) == true ? printf("passed\n") : printf("failed\n");
   search(list, 100) == false ? printf("passed\n") : printf("failed\n");
 
-  // Delete
+  // Delete - first element
   delete_data(list, 30);
   int test_arr_2[] = {50, 40, 20, 10};
   assert_list(list, test_arr_2, 4) == true ? printf("passed\n")
                                            : printf("failed\n");
 
+  // Delete - any element
   delete_data(list, 50);
   int test_arr_3[] = {40, 20, 10};
   assert_list(list, test_arr_3, 3) == true ? printf("passed\n")
                                            : printf("failed\n");
 
+  // Delete - last element
   delete_data(list, 10);
   int test_arr_4[] = {40, 20};
   assert_list(list, test_arr_4, 2) == true ? printf("passed\n")
+                                           : printf("failed\n");
+
+  // Reverse - empty list
+  struct List *empty_list = (struct List *)malloc(sizeof(struct List));
+  empty_list->head = NULL;
+  int empty_arr[] = {};
+  assert_list(empty_list, empty_arr, 0) == true ? printf("passed\n")
+                                                : printf("failed\n");
+
+  // Reverse - unit length list
+  delete_data(list, 40);
+  int unit_arr[] = {20};
+  assert_list(list, unit_arr, 1) == true ? printf("passed\n")
+                                         : printf("failed\n");
+
+  // Reverse - non-empty list
+  insert(list, 10);
+  insert(list, 30);
+  insert(list, 40);
+  insert(list, 50);
+  int test_arr_5[] = {50, 40, 30, 10, 20};
+  assert_list(list, test_arr_5, 5) == true ? printf("passed\n")
+                                           : printf("failed\n");
+  reverse(list);
+  int test_arr_6[] = {20, 10, 30, 40, 50};
+  assert_list(list, test_arr_6, 5) == true ? printf("passed\n")
                                            : printf("failed\n");
 }
 

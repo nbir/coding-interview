@@ -1,5 +1,9 @@
 A collection of programming exercises to prepare for a coding interview. Click on the links below to view the solution.
 
+To run a Python program simply run `python <filename.py>`.
+
+To run a C program run `gcc <filename>.c -o ./<filename>.out && ./<filename>.out`.
+
 ## Search and Sorting
 
 - [Binary Search](./binary_search.py)
@@ -13,7 +17,7 @@ References:
 
 ## Data Structures
 
-- [Linked List](./linked_list.c) (Introduction to Algorithms, page 236)
+- [Linked List](./linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse operations
 
 References:
 
