@@ -1,6 +1,3 @@
-# https://www.geeksforgeeks.org/leaders-in-an-array/
-
-
 def brute_force(numbers):
     leaders = []
 

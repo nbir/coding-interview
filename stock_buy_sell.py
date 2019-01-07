@@ -1,5 +1,3 @@
-# https://www.geeksforgeeks.org/stock-buy-sell/
-
 import math
 
 
