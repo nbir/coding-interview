@@ -17,7 +17,8 @@ References:
 
 ## Data Structures
 
-- [Linked List](./linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse operations
+- [Linked List](./linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse
+- [Doubly Linked List](./doubly_linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse
 
 References:
 
