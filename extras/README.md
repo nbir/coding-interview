@@ -2,6 +2,6 @@ A few more programming exercises that aren't necessarily correct, covers all edg
 
 ## Array
 
-- [Remove Duplicates from Sorted Array]('./remove_duplicates.py') ([Question ↗](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/))
-- [Rotate Array]('./rotate_array.py') ([Question ↗](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/646/))
+- [Remove Duplicates from Sorted Array](./remove_duplicates.py) ([Question ↗](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/727/))
+- [Rotate Array](./rotate_array.py) ([Question ↗](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/646/))
 - [Two Sum](./two_sum.py) ([Question ↗](https://leetcode.com/explore/featured/card/top-interview-questions-easy/92/array/546/))
