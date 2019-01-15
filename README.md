@@ -1,5 +1,7 @@
 A collection of programming exercises to prepare for a coding interview. Click on the links below to view the solution.
 
+There are a few more exercises that aren't necessarily correct, covers all edge cases, or are efficient [here ↗](./extras/).
+
 To run a Python program simply run `python <filename.py>`.
 
 To run a C program run `gcc <filename>.c -o ./<filename>.out && ./<filename>.out`.
