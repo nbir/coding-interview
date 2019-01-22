@@ -22,6 +22,7 @@ References:
 - [Linked List](./linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse
 - [Doubly Linked List](./doubly_linked_list.c) (Introduction to Algorithms, page 236) insert, count, search, delete, reverse
 - [Circular Linked List](./circular_linked_list.c)
+- [Binary Search Tree](./binary_search_tree.py) (Introduction to Algorithms, page 286)
 
 References:
 
