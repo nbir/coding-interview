@@ -3,11 +3,11 @@ defmodule LinkedList do
 
   def size(list), do: size(list, 0)
   defp size([], count), do: count
-  defp size([head | tail], count), do: size(tail, count + 1)
+  defp size([_head | tail], count), do: size(tail, count + 1)
 
   def search([], _data), do: false
-  def search([head | tail], data) when head == data, do: true
-  def search([head | tail], data), do: search(tail, data)
+  def search([head | _tail], data) when head == data, do: true
+  def search([_head | tail], data), do: search(tail, data)
 
   def delete([], _data), do: []
   def delete([head | tail], data) when head == data, do: tail
